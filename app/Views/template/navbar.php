@@ -9,7 +9,7 @@
         <!-- Navbar Search -->
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?= base_url('auth/logout') ?>">
                 Logout
                 <i class="fa fa-arrow-circle-right"></i>
             </a>

@@ -22,9 +22,14 @@
             <div class="col-4 p-4 shadow rounded" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
                 <img src="" class="w-100" style="height: 150px; object-fit: contain;">
                 <h3 class="text-gray-900 font-weight-bolder mt-3">Login</h3>
-                <h6 class="font-weight-bold mb-4 text-uppercase text-gray-700">Buku Induk Siswa</h6>
+                <h6 class="font-weight-bold mb-4 text-uppercase text-gray-700">E-Raport</h6>
 
-                <form action="<?= base_url('auth') ?>" method="post" class="user">
+                <form action="<?= base_url('auth/login') ?>" method="post" class="user">
+                    <?php if (session('danger')) : ?>
+                        <div class="alert alert-danger my-3" role="alert">
+                            <?= session('danger') ?>
+                        </div>
+                    <?php endif ?>
                     <div class="form-group">
                         <input type="text" class="form-control px-3" name="txtUsername" id="txtUsername" placeholder="Username" required>
                     </div>
