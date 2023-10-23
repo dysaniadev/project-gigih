@@ -31,10 +31,7 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-        <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-        </div>
+
 
         <!-- Navbar -->
 
@@ -71,10 +68,7 @@
             </div>
         </footer>
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
+
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
@@ -108,8 +102,6 @@
     <script src="<?= base_url() ?>/assets/dist/js/adminlte.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="<?= base_url() ?>/assets/dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="<?= base_url() ?>/assets/dist/js/pages/dashboard.js"></script>
 </body>
 
 </html>
