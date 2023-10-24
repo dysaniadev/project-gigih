@@ -16,13 +16,18 @@
     <link rel="stylesheet" href="<?= base_url() ?>/assets/dist/css/adminlte.min.css">
 </head>
 
-<body class="vh-100 d-flex align-items-center justify-content-center" style="background-color: #005B41;">
+<body class="vh-100 d-flex align-items-center justify-content-center">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-4 p-4 shadow rounded" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
-                <img src="" class="w-100" style="height: 150px; object-fit: contain;">
-                <h3 class="text-gray-900 font-weight-bolder mt-3">Login</h3>
-                <h6 class="font-weight-bold mb-4 text-uppercase text-gray-700">E-Raport</h6>
+            <div class="col-6 shadow border rounded-left" style="background-color: #005B41dd;">
+                <div class="m-5 d-flex">
+                    <img src="<?= base_url('assets/images/mts.png') ?>" class="w-75 mx-auto">
+                </div>
+            </div>
+            <div class="col-4 p-4 shadow rounded-right" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
+                <!-- <img src="" class="w-100" style="height: 150px; object-fit: contain;"> -->
+                <div class="font-weight-bolder text-center" style="font-size:45px;">Selamat Datang</div>
+                <div class="text-gray-900 h6 mb-3 text-right mr-3">E-Raport - Login</div>
 
                 <form action="<?= base_url('auth/login') ?>" method="post" class="user">
                     <?php if (session('danger')) : ?>
@@ -36,7 +41,7 @@
                     <div class="form-group">
                         <input type="password" class="form-control px-3" name="txtPassword" id="txtPassword" placeholder="Password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">
+                    <button type="submit" class="btn btn-block text-white" style="background-color: #005B41dd;">
                         Login
                     </button>
                 </form>
