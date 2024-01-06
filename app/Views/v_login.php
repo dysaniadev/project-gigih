@@ -25,10 +25,8 @@
                 </div>
             </div>
             <div class="col-4 p-4 shadow rounded-right" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
-                <!-- <img src="" class="w-100" style="height: 150px; object-fit: contain;"> -->
                 <div class="font-weight-bolder text-center" style="font-size:45px;">Selamat Datang</div>
                 <div class="text-gray-900 h6 mb-3 text-right mr-3">E-Raport - Login</div>
-
                 <form action="<?= base_url('auth/login') ?>" method="post" class="user">
                     <?php if (session('danger')) : ?>
                         <div class="alert alert-danger my-3" role="alert">
@@ -49,7 +47,6 @@
         </div>
     </div>
 
-    <!-- jQuery -->
     <script src="<?= base_url() ?>/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="<?= base_url() ?>/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
