@@ -17,8 +17,8 @@ class ModelSemester extends Model
         'smt_start_at',
         'smt_finish_at',
         'smt_ta_id',
-        'smt_created_at',
-        'smt_updated_at',
+        'smt_created_by',
+        'smt_updated_by',
     ];
 
     // Dates

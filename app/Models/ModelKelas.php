@@ -15,10 +15,8 @@ class ModelKelas extends Model
     protected $allowedFields    = ['kelas_id', 'kelas_grade', 'kelas_nama'];
 
     private $classFlow = [
-        1 => 2,
-        2 => 3,
-        4 => 5,
-        5 => 6
+        7 => 8,
+        8 => 9,
     ];
 
     public function getClassFlow(): array

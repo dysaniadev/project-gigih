@@ -26,13 +26,16 @@ class ModelSiswa extends Model
         'siswa_foto',
         'siswa_updated_by',
         'siswa_created_by',
+        'siswa_deleted_by',
     ];
 
     protected $useSoftDeletes   = true;
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
+    protected $createdField  = 'siswa_created_at';
+    protected $updatedField  = 'siswa_updated_at';
+    protected $deletedField  = 'siswa_deleted_at';
+
 
     public $backupkey = "siswa";
 }
