@@ -14,22 +14,23 @@
     <link rel="stylesheet" href="<?= base_url() ?>/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= base_url() ?>/assets/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/dist/css/style.css">
 </head>
 
-<body class="vh-100 d-flex align-items-center justify-content-center">
+<body class="vh-100 d-flex align-items-center justify-content-center bg-login">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-6 shadow border rounded-left" style="background-color: #005B41dd;">
+            <div class="col-6 shadow border rounded-left warna-bg">
                 <div class="m-5 d-flex">
                     <img src="<?= base_url('assets/images/mts.png') ?>" class="w-75 mx-auto">
                 </div>
             </div>
-            <div class="col-4 p-4 shadow rounded-right" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
+            <div class="col-4 p-4 shadow rounded-right d-flex flex-column" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
                 <!-- <img src="" class="w-100" style="height: 150px; object-fit: contain;"> -->
                 <div class="font-weight-bolder text-center" style="font-size:45px;">Selamat Datang</div>
                 <div class="text-gray-900 h6 mb-3 text-right mr-3">E-Raport - Login</div>
 
-                <form action="<?= base_url('auth/login') ?>" method="post" class="user">
+                <form action="<?= base_url('auth/login') ?>" method="post" class="user mt-5">
                     <?php if (session('danger')) : ?>
                         <div class="alert alert-danger my-3" role="alert">
                             <?= session('danger') ?>
@@ -41,7 +42,7 @@
                     <div class="form-group">
                         <input type="password" class="form-control px-3" name="txtPassword" id="txtPassword" placeholder="Password" required>
                     </div>
-                    <button type="submit" class="btn btn-block text-white" style="background-color: #005B41dd;">
+                    <button type="submit" class="btn btn-block text-white warna-bg">
                         Login
                     </button>
                 </form>

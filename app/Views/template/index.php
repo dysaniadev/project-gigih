@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>/assets/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="<?= base_url() ?>/assets/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/dist/css/style.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -61,10 +62,10 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            <strong>Copyright &copy; 2024 <a href="#">dysania</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
+                <b>V</b> 1.0.0
             </div>
         </footer>
 
@@ -100,8 +101,7 @@
     <script src="<?= base_url() ?>/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
     <script src="<?= base_url() ?>/assets/dist/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="<?= base_url() ?>/assets/dist/js/demo.js"></script>
+
 </body>
 
 </html>
