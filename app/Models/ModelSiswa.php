@@ -22,10 +22,10 @@ class ModelSiswa extends Model
         'siswa_agama',
         'siswa_alamat',
         'siswa_th_angkatan',
-        'siswa_kelas_id',
+        'siswa_kelas_sekarang',
         'siswa_foto',
-        'updated_by',
-        'created_by',
+        'siswa_updated_by',
+        'siswa_created_by',
     ];
 
     protected $useSoftDeletes   = true;

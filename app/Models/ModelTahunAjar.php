@@ -10,14 +10,20 @@ class ModelTahunAjar extends Model
     protected $primaryKey       = 'ta_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
         'ta_id',
         'ta_nama',
-        'updated_at',
-        'created_at',
+        'ta_updated_by',
+        'ta_created_by',
     ];
+
+    // Dates
+    protected $useTimestamps = true;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'ta_created_at';
+    protected $updatedField  = 'ta_updated_at';
+
     public function getTANow()
     {
         return $this->orderBy('ta_id', 'desc')->first();

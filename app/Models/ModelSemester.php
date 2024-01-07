@@ -10,7 +10,6 @@ class ModelSemester extends Model
     protected $primaryKey       = 'smt_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
         'smt_id',
@@ -18,9 +17,15 @@ class ModelSemester extends Model
         'smt_start_at',
         'smt_finish_at',
         'smt_ta_id',
-        'created_at',
-        'updated_at',
+        'smt_created_at',
+        'smt_updated_at',
     ];
+
+    // Dates
+    protected $useTimestamps = true;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'smt_created_at';
+    protected $updatedField  = 'smt_updated_at';
 
     public $backupkey = "semester";
 
