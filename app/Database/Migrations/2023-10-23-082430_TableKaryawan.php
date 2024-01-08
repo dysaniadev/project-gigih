@@ -36,6 +36,7 @@ class TableKaryawan extends Migration
             'karyawan_foto' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
+                'null'       => true
             ],
             'karyawan_deleted_at' => [
                 'type'           => 'datetime',

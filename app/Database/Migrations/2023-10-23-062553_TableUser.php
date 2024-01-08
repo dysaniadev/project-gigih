@@ -22,10 +22,6 @@ class TableUser extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '32'
             ],
-            'user_name' => [
-                'type' => 'VARCHAR',
-                'constraint' => '60'
-            ],
             'user_role_id' => [
                 'type' => 'TINYINT',
                 'unsigned' => true,

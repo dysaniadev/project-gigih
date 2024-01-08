@@ -58,6 +58,7 @@ class TableSiswa extends Migration
             'siswa_foto' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
+                'null'       => true
             ],
             'siswa_deleted_at' => [
                 'type'           => 'datetime',

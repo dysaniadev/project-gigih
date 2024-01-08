@@ -12,7 +12,7 @@ class ModelUser extends Model
     protected $returnType       = 'array';
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'user_username', 'user_password', 'user_name', 'user_role_id'
+        'user_id', 'user_username', 'user_password', 'user_role_id'
     ];
 
     // Dates
@@ -22,4 +22,6 @@ class ModelUser extends Model
     protected $createdField  = 'user_created_at';
     protected $updatedField  = 'user_updated_at';
     protected $deletedField  = 'user_deleted_at';
+
+    public $backupkey = "user";
 }

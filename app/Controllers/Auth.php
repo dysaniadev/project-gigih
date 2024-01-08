@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\ModelKaryawan;
+use App\Models\ModelSiswa;
 use App\Models\ModelUser;
 
 class Auth extends BaseController
@@ -27,12 +29,30 @@ class Auth extends BaseController
         if (empty($dtUser)) {
             return redirect()->to(base_url('auth'))->with('danger', 'Username atau Password salah');
         }
+        $userName = null;
+        if ($dtUser['user_role_id'] == '1' || $dtUser['user_role_id'] == '2') {
+            $modelKaryawan = new ModelKaryawan();
+            $detail = $modelKaryawan->where('karyawan_user_id', $dtUser['user_id'])->first();
+            if (empty($detail)) {
+                return redirect()->to(base_url('auth'))->with('danger', 'Ada kesalahan pada akun anda');
+            }
+            $userName = $detail['karyawan_nama'];
+        } elseif ($dtUser['user_role_id'] == '3') {
+            $modelSiswa = new ModelSiswa();
+            $detail = $modelSiswa->where('siswa_user_id', $dtUser['user_id'])->first();
+            if (empty($detail)) {
+                return redirect()->to(base_url('auth'))->with('danger', 'Ada kesalahan pada akun anda');
+            }
+            $userName = $detail['siswa_nama'];
+        } else {
+            return redirect()->to(base_url('auth'))->with('danger', 'Ada kesalahan pada role akun anda');
+        }
         session()->set(
             'log_auth',
             [
                 'userID' => $dtUser['user_id'],
                 'userRole' => $dtUser['role_name'],
-                'userName' => ucfirst($dtUser['user_name'])
+                'userName' => ucfirst($userName)
             ]
         );
         return redirect()->to(base_url());

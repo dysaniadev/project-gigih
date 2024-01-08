@@ -13,10 +13,10 @@ class DataRole extends Seeder
                 'role_name' => 'Petugas TU'
             ],
             [
-                'role_name' => 'Kepala Sekolah'
+                'role_name' => 'Guru'
             ],
             [
-                'role_name' => 'Guru'
+                'role_name' => 'Siswa'
             ],
         ];
         foreach ($data as $dt) {
